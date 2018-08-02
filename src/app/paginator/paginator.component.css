@@ -1,0 +1,14 @@
+.paginator {
+  padding: 20px 0;
+}
+
+.paginator span {
+  margin: 0 2px;
+}
+
+.current-page {
+  color: black;
+  text-decoration: none !important;
+  cursor: text;
+}
+/*# sourceMappingURL=paginator.component.css.map */

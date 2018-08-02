@@ -1,0 +1,10 @@
+<li #li class="row justify-content-center" [id]="todo.todoId">
+    <div class="row align-items-center line">
+        <input type="checkbox" [(ngModel)]="todo.completed">
+        <label *ngIf="state" [class.line-through]="todo.completed" (dblclick)="state=false">
+            {{ todo.todo }}
+        </label>
+        <input *ngIf="!state" name="todo" #input type="text" [(ngModel)]="todo.todo" (blur)="editTodo()">
+        <div class="delete" (click)="deleteTodo()"></div>
+    </div>
+</li>

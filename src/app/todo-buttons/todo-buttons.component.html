@@ -1,0 +1,14 @@
+<div class="row justify-content-center">
+  <form class="row justify-content-between footer-buttons" (change)="setType()">
+      <div class="all">All
+          <input type="radio" name="view" value="all" [(ngModel)]="stateRadioBtn">
+      </div>
+      <div class="active">Active
+          <input type="radio" name="view" value="active" [(ngModel)]="stateRadioBtn">
+      </div>
+      <div class="completed">Completed
+          <input type="radio" name="view" value="completed" [(ngModel)]="stateRadioBtn">
+      </div>
+      <a *ngIf="todosservice.calculateCompletedTodos()" href="" (click)="clear($event)">Clear completed</a>
+  </form>
+</div>

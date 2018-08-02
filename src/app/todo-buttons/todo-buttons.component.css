@@ -1,0 +1,20 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, label {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: black;
+}
+
+.footer-buttons {
+  padding: 10px 5px;
+  width: 430px;
+  background-color: lightgray;
+}
+/*# sourceMappingURL=todo-buttons.component.css.map */

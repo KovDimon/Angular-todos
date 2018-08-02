@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,OAAO,EAAE,MAAM;CAKlB;;AAND,AAGI,UAHM,CAGJ,IAAI,CAAA;EACF,MAAM,EAAE,KAAK;CAChB;;AAGL,AAAA,aAAa,CAAA;EACT,KAAK,EAAE,KAAK;EACZ,eAAe,EAAE,eAAe;EAChC,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "paginator.component.scss"
+    ],
+    "names": [],
+    "file": "paginator.component.css"
+}

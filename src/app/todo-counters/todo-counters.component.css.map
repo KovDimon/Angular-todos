@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;CACZ;;AAED,AAAA,EAAE,EAAE,EAAE,EAAE,EAAE,EAAC,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,CAAC,EAAC,EAAE,EAAE,EAAE,EAAC,KAAK,CAAA;EACjC,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;CACZ;;AACG,AAAA,gBAAgB,CAAA;EACZ,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,QAAQ;EACjB,gBAAgB,EAAE,SAAS;CAC9B",
+    "sources": [
+        "todo-counters.component.scss"
+    ],
+    "names": [],
+    "file": "todo-counters.component.css"
+}

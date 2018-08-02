@@ -1,0 +1,5 @@
+<div class="paginator">
+  <span *ngFor="let page of setMaxPages()">
+      <a [class.current-page]="todosservice.currentPage==page" *ngIf="todosservice.maxPages > 1" href="" (click) ="goToPage($event)">{{page}}</a>
+  </span>
+</div>

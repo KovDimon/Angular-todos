@@ -1,0 +1,68 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, label {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input[type="text"] {
+  border: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+label {
+  width: 380px;
+  padding: 10px 10px 10px 8px;
+  overflow: hidden;
+}
+
+.delete {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  background: url(../img/icon_delete.png) no-repeat;
+  background-size: 25px, 25px;
+  opacity: 0.5;
+}
+
+.delete:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+input[name="todo"] {
+  width: 380px;
+  padding: 10px 10px 10px 8px;
+}
+
+.line-through {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.line {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  padding: 1px 0;
+}
+
+.line input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+
+.current-page {
+  color: blue;
+  text-decoration: none !important;
+  cursor: text;
+}
+/*# sourceMappingURL=todo.component.css.map */
