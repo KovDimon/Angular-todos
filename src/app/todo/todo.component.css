@@ -53,6 +53,7 @@ input[name="todo"] {
 .line {
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   padding: 1px 0;
+  margin-left: -55px;
 }
 
 .line input[type="checkbox"] {

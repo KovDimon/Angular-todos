@@ -9,6 +9,6 @@
       <div class="completed">Completed
           <input type="radio" name="view" value="completed" [(ngModel)]="stateRadioBtn">
       </div>
-      <a *ngIf="todosservice.calculateCompletedTodos()" href="" (click)="clear($event)">Clear completed</a>
+      <a *ngIf="appcomponent.calculateCompletedTodos()" href="" (click)="appcomponent.clearCompleted($event)">Clear completed</a>
   </form>
 </div>

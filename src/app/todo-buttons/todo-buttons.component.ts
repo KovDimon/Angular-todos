@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { TodosService } from '../todos.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-todo-buttons',
@@ -11,7 +12,7 @@ export class TodoButtonsComponent implements OnInit {
 
   stateRadioBtn : string = 'all';
 
-  constructor(private todosservice:TodosService) { }
+  constructor(private appcomponent: AppComponent) { }
 
   ngOnInit() {
     this.setType();
@@ -19,12 +20,7 @@ export class TodoButtonsComponent implements OnInit {
   }
 
   setType(){
-    this.todosservice.setTodoView(this.stateRadioBtn);
-    //console.log(this.stateRadioBtn);
+    this.appcomponent.setTodoView(this.stateRadioBtn);
   }
 
-  clear(event) {
-    event.preventDefault();
-    this.todosservice.clearCompleted();
-  } 
 }

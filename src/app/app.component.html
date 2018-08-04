@@ -3,10 +3,12 @@
     <h1>todos</h1>
   </div>
   <div class="justify-content-center main">
-    <app-add-todo></app-add-todo>
-    <app-todo-list></app-todo-list>
+    <app-add-todo (onAddTodo)="addTodo($event)"></app-add-todo>
+    <ul class="justify-content-center list"> 
+      <app-todo *ngFor="let todo of getTodoItems()" [todo]="todo"></app-todo>
+    </ul>
   </div>
-  <div *ngIf="todosservice.calculateAllTodos()" class="justify-content-center footer">
+  <div *ngIf="calculateAllTodos()" class="justify-content-center footer">
     <app-todo-counters></app-todo-counters>
     <app-todo-buttons></app-todo-buttons>
   </div>

@@ -1,6 +1,6 @@
 <div class="row justify-content-center new-task">
     <form class="row justify-content-center align-items-center main-add-task" (ngSubmit)="addTodo(newTask)">
-        <!--<div class="main-all-checkbox"></div>-->
+        <div [ngClass]="{'main-all-checkbox': true, 'main-all-checkbox-marker': appcomponent.allCheckbox}" class="main-all-checkbox" (click)="appcomponent.updateAllCheckbox()"></div>
         <input name="todo" #newTask id="new-task" type="text" placeholder="What needs to be done?" autofocus autocomplete="off">
         <input name="button" id="add" type="submit" value="add">
     </form>

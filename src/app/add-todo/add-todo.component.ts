@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgModel } from '@angular/forms';
 
 import { TodosService } from '../todos.service';
+import { Todo } from '../todo';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-add-todo',
@@ -10,16 +12,16 @@ import { TodosService } from '../todos.service';
 })
 export class AddTodoComponent implements OnInit {
 
-  constructor(private todosservice:TodosService) { }
+  @Output() onAddTodo = new EventEmitter<string>();
+
+  constructor(private appcomponent: AppComponent) { }
 
   ngOnInit() {
   }
 
   addTodo(todo:HTMLInputElement){
-    if(todo.value == '') return;
-    this.todosservice.addTodo(todo.value);
-    //console.log(todo);
+    if(!todo.value) return;
+    this.onAddTodo.emit(todo.value);
     todo.value = '';
   }
-
 }

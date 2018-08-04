@@ -1,10 +1,10 @@
-<li #li class="row justify-content-center" [id]="todo.todoId">
-    <div class="row align-items-center line">
-        <input type="checkbox" [(ngModel)]="todo.completed">
+<li #li class="row justify-content-center" [id]="todo.id">
+    <div (mouseenter)="liView=true" (mouseleave)="liView=false" class="row align-items-center line">
+        <input *ngIf="liView" (change)="editTodo(todo)" type="checkbox" [(ngModel)]="todo.completed">
         <label *ngIf="state" [class.line-through]="todo.completed" (dblclick)="state=false">
             {{ todo.todo }}
         </label>
-        <input *ngIf="!state" name="todo" #input type="text" [(ngModel)]="todo.todo" (blur)="editTodo()">
-        <div class="delete" (click)="deleteTodo()"></div>
+        <input *ngIf="!state" name="todo" #input type="text" [(ngModel)]="todo.todo" (blur)="editTodo(todo)">
+        <div *ngIf="liView" class="delete" (click)="appcomponent.removeTodo(li)"></div>
     </div>
 </li>

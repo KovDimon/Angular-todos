@@ -1,0 +1,42 @@
+input[type="text"] {
+  border: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+#new-task {
+  height: 50px;
+  width: 300px;
+}
+
+#add:focus {
+  outline: none;
+}
+
+.main-add-task {
+  width: 440px;
+}
+
+input[type="submit"] {
+  width: 95px;
+  height: 40px;
+}
+
+.main-all-checkbox {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  background: url(../img/arrow-down.png) no-repeat -5px 0;
+  opacity: 0.3;
+}
+
+.main-all-checkbox-marker {
+  opacity: 1;
+}
+
+.main-all-checkbox:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=add-todo.component.css.map */

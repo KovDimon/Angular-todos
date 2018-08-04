@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChildren, ElementRef } from '@angular/core';
 
 import { TodosService } from '../todos.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-paginator',
@@ -9,17 +10,16 @@ import { TodosService } from '../todos.service';
 })
 export class PaginatorComponent implements OnInit {
 
-  //@ViewChild('link') link:ElementRef;
   pages = [];
 
-  constructor(private todosservice:TodosService) { }
+  constructor(private todosservice:TodosService, private appcomponent: AppComponent) { }
 
   ngOnInit() {
   }
 
   setMaxPages(){
-    this.pages.length = this.todosservice.maxPages;
-    for(let i = 0; i < this.todosservice.maxPages; i++){
+    this.pages.length = this.appcomponent.maxPages;
+    for(let i = 0; i < this.appcomponent.maxPages; i++){
       this.pages[i] = i+1;
     }
 
@@ -28,6 +28,6 @@ export class PaginatorComponent implements OnInit {
 
   goToPage(event){
     event.preventDefault();
-    this.todosservice.currentPage = event.target.text;
+    this.appcomponent.currentPage = event.target.text;
   }
 }

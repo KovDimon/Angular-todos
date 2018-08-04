@@ -1,33 +1,38 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, DoCheck } from '@angular/core';
 
 import { Todo } from '../todo';
 import { TodosService } from '../todos.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css']
 })
-export class TodoComponent implements OnInit {
+export class TodoComponent implements OnInit, DoCheck {
 
   @Input() todo : Todo;
-  //@Input() input : ElementRef;
-  @ViewChild('li') li : ElementRef;
+  @ViewChild('input') input : ElementRef;
   state : boolean = true;
+  liView: boolean = false;
 
-  constructor(private todosservice:TodosService) { }
+  constructor(private appcomponent: AppComponent, private todosservice: TodosService) { }
 
   ngOnInit() {
   }
 
-  editTodo(){
-    this.state == true ? this.state = false : this.state = true;
-    //input.focus();
-    //console.log(input);
-    //todo.focus();
+  ngDoCheck(){
+    if(this.input){
+      this.input.nativeElement.focus();
+    }
   }
 
-  deleteTodo(){
-    this.todosservice.removeTodo(this.li.nativeElement.id);
+  editTodo(todo: Todo){
+    this.state = true;
+    this.todosservice.updateTodo(todo)
+    .subscribe(
+      todo => console.log(todo),
+      err => console.log('ERROR Update todo')
+    );
   }
 }
